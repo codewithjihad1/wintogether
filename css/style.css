@@ -1,0 +1,1518 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* ======== Global css ====== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.main-wrap{
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+.common-wrap{
+    max-width: 1300px;
+    margin: 0 auto;
+    clear: both;
+}
+section{
+    padding: 50px 20px;
+}
+.sec_title h2{
+    font-size: 25pt;
+    font-weight: bold;
+    color: #011640;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sec_desc{
+    max-width: 750px;
+    font-size: 12pt;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 26px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================
+Header section css 
+==========================*/
+.header-wrap{
+    border-bottom: 3px solid #B6D6F2;
+    padding: 0 20px;
+    position: relative;
+}
+.header-inner{
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    align-items: center;
+}
+.logo a{
+    text-decoration: none;
+    font-size: 25pt;
+    color: #E83338;
+    font-weight: 600;
+    height: 100%;
+    line-height: 80px;
+    user-select: none;
+}
+.logo a span{
+    color: black;
+}
+.menu-wrap{
+    display: flex;
+    align-items: center;
+}
+.menu-wrap ul li {
+    display: inline-block;
+    margin: 0 12px;
+    position: relative;
+    transition: all .5s ease;
+}
+.menu-wrap ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #333333;
+}
+.menu-wrap ul li::before,
+.menu-wrap ul .active::before{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #E83338;
+    position: absolute;
+    left: 50%;
+    bottom: -42px;
+    transform: translateX(-50%);
+    transition: all .4s ease;
+}
+.menu-wrap li:hover a,
+.menu-wrap .active{
+    color: #E83338;
+}
+.menu-wrap ul li:hover::before,
+.menu-wrap ul .active::before{
+    width: 100%;
+}
+.all_dnt-btn {
+    justify-self: flex-end;
+    line-height: 80px;
+    margin-left: 10px;
+    transition: all .4s ease;
+}
+.all_dnt-btn button {
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #E83338;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.all_dnt-btn button i{
+    margin-right: 5px;
+    color: #fff;
+}
+.all_dnt-btn:hover{
+    opacity: .8;
+}
+
+
+/* Home section css  */
+.hero-wrap{
+    position: relative;
+    background: url(../img/home-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.hero-wrap::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00000099, #00000099);
+}
+.hero-wrap .common-wrap{
+    max-width: 870px;
+}
+.hero-inner{
+    min-height: 645px;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+.hero-wrap .sub_title{
+    margin-bottom: 10px;
+}
+.hero-wrap .sub_title span {
+    font-size: 15px;
+    color: #fff;
+    background: #E83338;
+    padding: 10px 20px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+.hero-wrap .home_title h2{
+    font-size: 94px;
+    color: #fff;
+    text-align: center;
+    line-height: 105px;
+}
+.hero-wrap .home_desc p{
+    font-size: 21px;
+    color: #f2f2f2;
+    text-align: center;
+    opacity: .5;
+}
+
+/* ===========================
+Work section css
+=========================== */
+.work-wrap{
+    background: #E9F3FB;
+}
+.work-wrap .sec_title{
+    margin: 0 0 55px;
+}
+.work-content-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+}
+.work-content-wrap .work_box {
+    text-align: center;
+}
+.work_box .box_icon {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
+    padding: 20px;
+    line-height: 120px;
+    font-size: 35pt;
+    background: #011640;
+    color: #fff;
+    border-radius: 50%;
+}
+.work_box .box_title h2 {
+    font-size: 16pt;
+    font-weight: 800;
+    color: #011640;
+    margin-bottom: 10px;
+}
+.work_box .box_desc p {
+    font-size: 11pt;
+    font-weight: 500;
+    color: #555;
+}
+
+
+/* =============================
+Donate section css
+============================= */
+.donate-wrap .sec_title{
+    background: url(../img/heart-bg.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+    margin: 0 0 40px;
+}
+.heart_icons{
+    text-align:center;
+    font-size: 16px;
+    color: red;
+    margin-top: 8px;
+    padding-bottom: 15px;
+}
+.donate-content-wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+}
+.dnt-box{
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(61, 45, 45, 0.20);
+    border-radius: 5px;
+}
+.dnt-box .dnt-image img{
+    width: 100%;
+}
+.dnt-box .dnt-title h3{
+    font-size: 18pt;
+    font-weight: 800;
+    color: #011640;
+    margin: 20px 0;
+    padding: 0 15px;
+}
+.dnt-box .dnt-desc p{
+    font-size: 12pt;
+    font-weight: bold;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+.dnt-box .dnt-button button{
+    border: none;
+    font-size: 14pt;
+    font-weight: 600;
+    color: #fff;
+    background: #E83338;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    float: left;
+}
+.dnt-box .dnt-icons{
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+.dnt-box .dnt-icons ul{
+    display: flex;
+    list-style: none;
+}
+.dnt-box .dnt-icons ul li{
+    margin: 0 5px;
+}
+.dnt-box .dnt-icons ul li a{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background: #011640;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16pt;
+    color: #fff;
+}
+.show-all-dnt {
+    text-align: center;
+    margin: 40px 0 20px;
+    position: relative;
+}
+.show-all-dnt::after,
+.show-all-dnt::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 2px;
+    background: #E5E6E9;
+}
+.show-all-dnt::before {
+    right: 0;
+}
+.show-all-dnt::after {
+    right: 0;
+}
+.show-all-dnt button{
+    border: none;
+    font-size: 15pt;
+    font-weight: 600;
+    background: #011640;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* =========================
+The Global goals
+========================= */
+.global-wrap{
+    background: url(../img/global-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.global-inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.global-content{
+    width: 50%;
+}
+.gloabal-img{
+    width: 42%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.global-content .global-icon img{
+    width: 70px;
+    float: left;
+    margin-bottom: 10px;
+}
+.global-content .global-icon span{
+    float: left;
+    font-size: 25pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 70px;
+    margin-left: 10px;
+}
+.glb-title{
+    clear: both;
+}
+.glb-title h2{
+    font-size: 28pt;
+    font-weight: 900;
+    color: #0B1F47;
+    margin-bottom: 10px;
+}
+.glb-title p{
+    font-size: 12pt;
+    color: #666666;
+    margin-bottom: 20px;
+}
+.glb-button button{
+    border: none;
+    font-size: 14pt;
+    padding: 10px 20px;
+    background: #E83338;
+    border-radius: 5px;
+    color: #fff;
+}
+.gloabal-img img {
+    position: absolute;
+    bottom: -120px;
+    left: 0px;
+    width: 90%;
+}
+
+
+/* ==========================
+Check Out section css 
+========================== */
+.checkout-wrap .sec_title{
+    margin: 0 0 40px;
+}
+.checkout-content-wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 40px 20px;
+}
+.ckt-box{
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(61, 45, 45, 0.20);
+    border-radius: 5px;
+}
+.ckt-box .ckt-image img{
+    width: 100%;
+}
+.ckt-box .ckt-title h3{
+    font-size: 18pt;
+    font-weight: 800;
+    color: #011640;
+    margin: 20px 0;
+    padding: 0 15px;
+}
+.ckt-box .ckt-desc p{
+    font-size: 12pt;
+    font-weight: bold;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+.ckt-box .ckt-button button{
+    border: none;
+    font-size: 14pt;
+    font-weight: 600;
+    color: #fff;
+    background: #E83338;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    float: left;
+}
+.ckt-box .ckt-icons{
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+.ckt-box .ckt-icons ul{
+    display: flex;
+    list-style: none;
+}
+.ckt-box .ckt-icons ul li{
+    margin: 0 5px;
+}
+.ckt-box .ckt-icons ul li a{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background: #011640;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16pt;
+    color: #fff;
+}
+.show-all-ckt{
+    text-align: center;
+    margin: 15px 0;
+}
+.show-all-ckt button{
+    border: none;
+    font-size: 15pt;
+    font-weight: 600;
+    background: #011640;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ckt-image{
+    position: relative;
+}
+.ckt-image span{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background: #B6D6F2;
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+
+/* ============================
+Terms & Link section start
+============================ */
+.terms-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.term-left,
+.term-right{
+    width: 48%;
+}
+.term-left{
+    position: relative;
+}
+.term-left .term-bg img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+.term-left .term-title{
+    margin-bottom: 50px;
+}
+.term-title h4{
+    font-size: 18pt;
+    color:#E83338;
+    margin-bottom: 10px;
+}
+.term-title h2{
+    font-size: 28pt;
+    color: #011640;
+}
+.term-link ul{
+    column-count: 2;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+.term-left .term-link ul li{
+    margin: 15px 0;
+}
+.term-left .term-link ul li a{
+    font-size: 13pt;
+    color: #E83338;
+    font-weight: 500;
+}
+.term-left .term-link ul li a i{
+    margin-right: 10px;
+}
+.term-right .term-box{
+    padding: 25px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.1)
+}
+.term-right .term-box .term-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.term-right .term-box .term-title h3{
+    font-size: 18pt;
+    width: 95%;
+}
+.term-right .term-box .term-title i{
+    color: #E83338;
+}
+.term-right .term-box .term-decs{
+    margin-top: 20px;
+    font-size: 12pt;
+}
+.term-left .term-link ul li:first-child{
+    margin-top: 0;
+}   
+
+/* charity partners */
+.chp-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+    place-items: center;
+}
+
+/* Footer section css */
+.footer-wrap{
+    background: #010A26;
+    padding: 0 20px;
+}
+.footer-content-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    padding: 50px 0;
+    background: url(../img/heart-bg-f.png) no-repeat right bottom;
+}
+.f-box .fMenu-logo h2{
+    color: #fff;
+    font-size: 26pt;
+    margin-bottom: 20px;
+}
+.f-box .fMenu-logo span{
+    color: #E83338;
+}
+.f-box .fMenu-desc p{
+    color: #999;
+}
+.f-box .fMenu-title h2{
+    color: #fff;
+    font-size: 15pt;
+    margin-bottom: 20px;
+}
+.f-box .fMenu-items ul{
+    column-count: 2;
+    list-style: none;
+}
+.f-box .fMenu-items ul li{
+    margin-bottom: 10px;
+}
+.f-box .fMenu-items ul li a{
+    color: #999;
+    text-decoration: none;
+    font-size: 12pt;
+}
+.f-box .fMenu-icons ul{
+    display: flex;
+    list-style: none;
+}
+.f-box .fMenu-icons ul li{
+    margin-right: 10px;
+}
+.f-box .fMenu-icons ul li a{
+    text-decoration: none;
+    color: #010A26;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    font-size: 17pt;
+    border-radius: 50%;
+}
+.f-box .submit-btn input[type="text"]{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 13pt;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+}
+.f-box .submit-btn input[type="submit"]{
+    padding: 10px 30px;
+    font-size: 14pt;
+    font-weight: 600;
+    border: none;
+    background: #E83338;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.copyRight{
+    background: #01071C;
+    padding: 20px 0;
+    text-align: center;
+}
+.copyRight span{
+    color: #999;
+}
+
+/* Responsive menu */
+.menu-button{
+    display: none;
+}
+.cancle-button{
+    display: none;
+}
+
+/* =======================
+Page navigation css start
+========================*/
+.pageNav-wrap{
+    float: left;
+    width: 100%;
+    padding: 15px 20px;
+}
+.pageNav-inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.pageNav-inner ul{
+    list-style: none;
+}
+.pageNav-inner ul li{
+    display: inline-block;
+    padding: 0 13px 0 0;
+    position: relative;
+}
+.pageNav-inner ul li a{
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+}
+.pageNav-left li:last-child a{
+    color: #b0b0b0;
+}
+.pageNav-left li::before{
+    content: "/";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #b0b0b0;
+}
+.pageNav-left li:last-child::before{
+    content: "";
+}
+.pageNav-right li::before{
+    content: "/";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #b0b0b0;
+}
+.pageNav-right li:last-child::before{
+    content: "";
+}
+
+
+
+
+/* ===================================================
+About Cause Page Start 
+=================================================== */
+/* Donate Section */
+.donate-wrap .sec_title{
+    background: transparent;
+}
+
+/* =========================
+Support Section css start
+========================= */
+.support-wrap{
+    float: left;
+    width: 100%;
+    padding: 0 0 40px;
+}
+.support-inner{
+    min-height: 450px;
+    padding: 40px;
+    background: url(../img/support-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.support-content-wrap{
+    max-width: 400px;
+}
+.support-content-wrap span{
+    padding: 12px 15px;
+    background: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+.support-content-wrap h2{
+    margin: 25px 0;
+    font-size: 42px;
+    color: #fff;
+
+}
+.support-content-wrap p{
+    font-size: 18px;
+    color: #fff;
+}
+
+/* =====================
+Campaign Section css start
+===================== */
+.campaign-wrap{
+    float: left;
+    width: 100%;
+    padding: 0 20px 50px;
+}
+.campaign-inner{
+    display: flex;
+    flex-wrap: wrap;
+}
+.campaign-item{
+    padding: 40px 50px;
+    border: 1px solid #EEEEEE;
+}
+.campaign-item h2{
+    color: #010a26;
+    font-size: 24px;
+}
+.campaign-item h2 a{
+    color: #e83338;
+}
+.campaign-item:first-child{
+    width: 34.45%;
+    padding: 30px;
+}
+.share-campaign{
+    width: 19.5%;
+}
+.share-campaign h3{
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.share-campaign ul{
+    list-style: none;
+    text-align: center;
+}
+.share-campaign ul li{
+    margin-right: 5px;
+    display: inline-block;
+}
+.share-campaign ul li:last-child{
+    margin-right: 0;
+}
+.share-campaign ul li a{
+    text-decoration: none;
+}
+.share-campaign ul li a i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #fff;
+    background: #011640;
+}
+.remind-btn{
+    width: 17.7%;
+}
+.remind-btn button{
+    padding: 10px 13px;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 16px;
+    color: #010a26;
+    cursor: pointer;
+}
+.camp_donate-btn{
+    width: 28.35%;
+}
+.camp_donate-btn button{
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #E83338;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* =========================
+About Cause css start
+========================= */
+.aboutCause-wrap{
+    float: left;
+    width: 100%;
+}
+.aboutCause-inner{
+    display: grid;
+    grid-template-columns: 57% 38%;
+    grid-gap: 3%;
+    place-items: center;
+}
+.about-content h2{
+    margin-bottom: 35px;
+    font-size: 32px;
+    color: #011640;
+}
+.about-content p{
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 10px;
+}
+.about-content p.first-desc{
+    margin-bottom: 35px;
+}
+
+.consecteture-wrap{
+    float: left;
+    width: 100%;
+}
+.consecteture-inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+.consec-item{
+    padding: 40px 40px 30px;
+    border: 1px solid #EEEEEE;
+}
+.consec-item .consec-content{
+    float: right;
+    width: calc(100% - 60px);
+}
+.consec-item i{
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+    line-height: 45px;
+    font-size: 20px;
+    background: #E83338;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+.consec-content h3{
+    font-size: 21px;
+    color: #011640;
+    margin-bottom: 15px;
+}
+.consec-content p{
+    font-size: 16px;
+    color: #666666;
+}
+
+/* ===================================================
+About Cause Page End
+=================================================== */
+
+/* ===================================================
+Donation Page css Start
+=================================================== */
+.donation-wrap{
+    float: left;
+    width: 100%;
+}
+.donation-inner{
+    display: grid;
+    grid-template-columns: 66.5% 32.30%;
+    grid-gap: 20px;
+}
+.donation-content-wrap{
+    padding: 25px 30px 30px;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+}
+.donation-value{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.donation-value h3{
+    font-size: 21px;
+    color: #333333;
+}
+.donation-value ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    grid-gap: 10px;
+    margin: 15px 0;
+}
+.donation-value ul li{
+    padding: 10px 0;    
+    border-radius: 3px; 
+    border: 1px solid #DDDDDD;
+    text-align: center;                              
+    background: #F5F5F5;
+    text-decoration: none;
+    color: #010a26;
+    font-size: 24px;
+    cursor: pointer;
+}
+.donation-value ul li.select{
+    background: #E83338;
+    color: #fff;
+    border-radius: 5px;
+}
+.donation-value .donate-value-entry{
+    padding: 0;
+}
+.donation-value .donate-value-entry span{
+    display: inline-block;
+    width: 45px;
+    height: 100%;
+    padding: 10px 0; 
+    border-right: 1px solid #DDDDDD;
+    font-size: 24px;
+}
+.donation-value .donate-value-entry input{
+    float: right;
+    width: calc(100% - 45px);
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.donation-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 25px 0;
+}
+.donation-info .donation-info-title{
+    margin-bottom: 20px;
+}
+.donation-info .donation-info-title h3{
+    font-size: 21px;
+}
+.donation-info .donation-info-title p{
+    color: #333333;
+}
+.donation-info .donation-info-title p a{
+    color: #e83338;
+}
+.donation-info .contact-info label{
+    display: block;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.donation-info .contact-info em{
+    color: #e83338;
+    font-size: 17px;
+}
+.contact-info .firstName, .contact-info .lastName, .contact-info .email{
+    margin-bottom: 10px;
+}
+.contact-info .firstName input, .contact-info .lastName input, .contact-info .email input{
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #010a26;
+    font-weight: 500;
+    outline: none;
+}
+.contact-info .firstName input:focus,
+.contact-info .lastName input:focus,
+.contact-info .email input:focus{
+    border: 1px solid #e83338;
+}
+.contact-info .firstName input:valid,
+.contact-info .lastName input:valid,
+.contact-info .email input:valid{
+    border: 1px solid #20bf6b;
+}
+.contact-info .privacy-check label{
+    display: inline-block;
+}
+.privacy-check input[type="checkbox"]{
+    background: transparent;
+}
+.entry-amount{
+    margin-bottom: 20px;
+}
+.payment-info .entry-amount h3{
+    font-size: 21px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.payment-info .show-amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    background: #F5F5F5;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+}
+.payment-info .show-amount h5 {
+    font-size: 16px;
+    color: #333333;
+}
+.payment-info .show-amount strong{
+    font-size: 32px;
+}
+.payment-info .show-amount strong span{
+    font-size: 21px;
+}
+.payment-method .payment-option img{
+    width: auto;
+    height: auto;
+}
+.payment-option{
+    display: flex;
+    align-items: center;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 0 20px;
+    height: 50px;
+}
+.payment-option input{
+    margin-right: 20px;
+}
+
+.payment-submit-btn{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px 0 0;
+    border-top: 1px solid #DDDDDD;
+}
+.payment-submit-btn button{
+    width: 38%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #E83338;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.payment-submit-btn p.privacy-text {
+    width: 57%;
+    font-size: 14px;
+}
+.payment-submit-btn p.privacy-text a {
+    color: #e83338;
+}
+
+/* Side content */
+.side-content-wrap{
+    padding: 30px;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    margin: 0 0 20px;
+}
+.winCampain{
+    padding: 0 0 30px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.winCampain h2{
+    font-size: 32px;
+    color: #010A26;
+    margin-bottom: 20px;
+}
+.winCampain p{
+    font-size: 24px;
+    color: #010A26;
+}
+.winCampain p a{
+    font-size: 21px;
+    color: #e83338;
+}
+.winTerms{
+    padding: 30px 0 0;
+}
+.winTerms ul{
+    list-style: none;
+}
+.winTerms ul li{
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+.winTerms ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #555555;
+}
+.winTerms ul li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #010A26;
+}
+.winTerms button{
+    outline: none;
+    margin-top: 15px;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #010a26;
+    font-weight: 600;
+    background: transparent;
+}
+.winSecurity{
+    padding: 30px;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    text-align: center;
+}
+.winSecurity h3{
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 800;
+}
+.winSecurity h3 i{
+    color: #E83338;
+}
+.winSecurity p{
+    font-size: 14px;
+    color: #333333;
+    font-weight: 600;
+}
+/* ===================================================
+Donation Page css end
+=================================================== */
+
+
+
+/* ===================================================
+Login Page css Start
+=================================================== */
+section.login-from{
+    display: grid;
+    place-items: center;
+}
+.container{
+	background: #fff;
+	max-width: 450px;
+	width: 100%;
+	padding: 25px 30px;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px rgb(0, 0, 0, 0, 0.15);
+}
+.container form .title{
+	font-size: 30px;
+	font-weight: 600;
+	margin: 20px 0px 10px 0px;
+	position: relative;
+}
+.container form .title:before{
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 3px;
+	left: 1px;
+	bottom: 0;
+	background: #ff0080;
+	border-radius: 2px;
+}
+.container form .input-boxs{
+	height: 45px;
+	margin-top: 25px;
+	width: 100%;
+	position: relative;
+}
+.container form .input-boxs input{
+	height: 100%;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
+.container form .input-boxs:before{
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 100%;
+	background: #ccc;
+	left: 0;
+	bottom: 0;
+}
+.container form .input-boxs .underline{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	height: 2px;
+	width: 0;
+	background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+	transform-origin: left;
+	transition: .3s;
+}
+.container .input-boxs input:focus ~ .underline,
+.container .input-boxs input:valid ~ .underline{
+	width: 100%;
+}
+.container form .botton{
+	margin: 40px 0 20px 0;
+}
+.container form .input-boxs input[type="submit"]{
+	font-size: 17px;
+	border-radius: 5px;
+	background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
+	color: #fff;
+	transition: .3s;
+	cursor: pointer;
+}
+.container form .input-boxs input[type="submit"]:hover{
+	letter-spacing: 1px;
+	background: linear-gradient(to left, #99004D 0%, #ff0080 100%);
+}
+.container .option{
+	font-size: 14px;
+	text-align: center;
+}
+.container .twitter,
+.container .Facebook{
+	font-size: 15px;
+	display: block;
+	width: 100%;
+	height: 45px;
+	padding-left: 20px;
+	line-height: 45px;
+	border-radius: 5px;
+}
+.container .twitter a,
+.container .Facebook a{
+	text-decoration: none;
+	color: #fff;
+}
+.container .twitter a i,
+.container .Facebook a i{
+	padding-right: 5px;
+}
+.container .twitter{
+	background: linear-gradient(to left, #00acee 0%, #1abeff 100%);
+	margin: 20px 0 29px 0;
+}
+.container .Facebook{
+	background: linear-gradient(to left, #3b5998 0%, #477bb8 100%);
+	margin: 20px 0 15px 0;
+}
+.container .twitter:hover{
+	background: linear-gradient(to right, #00acee 0%, #1abeff 100%);
+}
+.container .Facebook:hover{
+	background: linear-gradient(to right, #3b5998 0%, #477bb8 100%);
+}
+
+
+/* ===================================================
+Responsive Layout Start
+=================================================== */
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 1120px) {
+    .menu-wrap ul{
+        position: absolute;
+        left: -100%;
+        top: 100px;
+        height: 100vh;
+        width: 70%;
+        background: #273c75;
+        z-index: 99;
+        transition: all .4s ease;
+    }
+    .menu-wrap ul.active{
+        left: 0;
+    }
+    .menu-wrap ul li{
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+    }
+    .menu-wrap ul li::before,
+    .menu-wrap ul .active::before{
+        display: none;
+    }
+    .menu-wrap ul.active li a{
+        color: #fff;
+    }
+    .menu-wrap ul li a.active,
+    .menu-wrap ul li a.hover{
+        color: #E83338;
+    }
+    .menu-button{
+        display: block;
+    }
+    .cancle-button{
+        display: block;
+        text-align: right;
+        padding: 15px;
+    }
+    .cancle-button i{
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .menu-button i{
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .all_dnt-btn{
+        display: none;
+    }
+    .gloabal-img {
+        width: 50%;
+    }
+    .campaign-item:first-child {
+        width: 60%;
+    }
+    .share-campaign {
+        width: 40%;
+    }
+    .remind-btn {
+        width: 40%;
+    }
+    .camp_donate-btn{
+        width: 60%;
+    }
+}
+
+
+/* Laptop Design  */
+@media (max-width: 1024px){
+    .hero-wrap .home_title h1 {
+        font-size: 70px;
+        line-height: 80px;
+    }
+    .show-all-dnt::after,
+    .show-all-dnt::before{
+        width: 30%;
+    }
+    .global-inner{
+        justify-content: center;
+    }
+    .global-content {
+        width: 100%;
+    }
+    .gloabal-img{
+        width: 70%;
+    }
+    .gloabal-img img{
+        position: static;
+    }
+    ul.pageNav-right{
+        display: none;
+    }
+    .aboutCause-inner {
+        grid-template-columns: 100%;
+    }
+}
+
+/* Tablet Design  */
+@media (max-width: 768px){
+    .menu-wrap ul.active{
+        width: 90%;
+    }
+    .hero-wrap .home_title h1 {
+        margin: 15px 0;
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .show-all-dnt::after,
+    .show-all-dnt::before{
+        width: 0;
+    }
+    .gloabal-img{
+        width: 90%;
+    }
+    .term-left {
+        width: 100%;
+        margin: 0 0 40px;
+    } 
+    .term-right {
+        width: 100%;
+    }
+    .pageNav-inner ul li a {
+        font-size: 14px;
+    }
+    .pageNav-inner ul li {
+        padding: 0 5px;
+    }
+    .pageNav-left li::before {
+        right: -5px;
+    }
+    .campaign-item:first-child {
+        width: 100%;
+    }
+    .share-campaign {
+        width: 100%;
+    }
+    .remind-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .camp_donate-btn{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px){
+    .menu-wrap ul.active{
+        width: 100%;
+    }
+    .support-content-wrap h2 {
+        font-size: 30px;
+    }
+    .support-content-wrap p {
+        font-size: 14px;
+    }
+    .donate-content-wrap {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .dnt-box .dnt-button button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .dnt-box .dnt-icons ul li a {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .consecteture-inner {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .container{
+		max-width: 100%;
+		height:100%;
+	}
+}

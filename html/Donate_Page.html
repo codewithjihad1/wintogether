@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Page</title>
+    <link rel="icon" href="../img/wt_logo-horiz_white_3x.png">
+    <script src="https://kit.fontawesome.com/a045d609b1.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main class="main-wrap">
+        <!-- =============Header section Start============= -->
+        <header class="header-wrap">
+            <div class="common-wrap header-inner">
+                <div class="logo">
+                    <a href="#">Win<span>Together.</span></a>
+                </div>
+                
+                <nav class="menu-wrap">
+                    <ul>                        
+                        <div class="cancle-button">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Travels</a></li>
+                        <li><a href="../html/Sweeps_Page.html">Winners</a></li>
+                        <li><a href="../html/Donate_Page.html" class="active">Donation</a></li>
+                        <li><a href="../html/cause_page.html">About us</a></li>
+                        <li><a href="../html/login_form.html">Sign in</a></li>
+                    </ul>
+                    <div class="all_dnt-btn">
+                        <button><i class="far fa-heart"></i>All Donations</button>
+                    </div>
+                    <div class="menu-button">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>                                 
+            </div>
+        </header>
+        <!-- =============Header Section End=============  -->
+        
+        <!-- =============Page Navigation Section Start=============  -->
+        <section class="pageNav-wrap">
+            <div class="common-wrap pageNav-inner">
+                <ul class="pageNav-left">
+                    <li><a href="#">Homepage </a></li>
+                    <li><a href="#">All Causes </a></li>
+                    <li><a href="#">Win a 3 Days trip to Paris for Two people </a></li>
+                    <li><a href="#">Checkout </a></li>
+                </ul>
+                <ul class="pageNav-right">
+                    <li><a href="#">FAQ </a></li>
+                    <li><a href="#">Term of Use </a></li>
+                    <li><a href="#">Official Rules</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- =============Page navigation Section End=============  -->
+
+        <!-- =============Donation Section Start=============  -->
+        <section class="donation-wrap">
+            <div class="common-wrap donation-inner">
+                <div class="donation-content-wrap">
+                    <form action="#">
+                        <div class="donation-value">
+                            <h3>Select donation value:</h3>
+                            <ul>
+                                <li class="dntAmt" onclick="donateAmount(this)">$5</li>
+                                <li class="dntAmt" onclick="donateAmount(this)">$10</li>
+                                <li class="dntAmt select" onclick="donateAmount(this)">$20</li>
+                                <li class="dntAmt" onclick="donateAmount(this)">$50</li>
+                                <li class="dntAmt" onclick="donateAmount(this)">$100</li>
+                                <li class="dntAmt donate-value-entry" onclick="donateAmount(this)"><span>$</span> <input type="text" placeholder="$1,00"></li>
+                            </ul>
+                            <span>* Every dollar is an entry</span>
+                        </div>
+                        <div class="donation-info">
+                            <div class="contact-info">
+                                <div class="donation-info-title">
+                                    <h3>Contact information:</h3>
+                                    <p>Already have an account? <a href="#">Sign in</a></p>
+                                </div>
+                                
+                                <div class="firstName">
+                                    <label for="fName">First Name<em>*</em></label>
+                                    <input type="text" placeholder="Enter your First Name" id="fName" required>
+                                </div>
+                                <div class="lastName">
+                                    <label for="lName">Last Name<em>*</em></label>
+                                    <input type="text" placeholder="Enter your last Name" id="lName" required>
+                                </div>
+                                <div class="email">
+                                    <label for="email">Email Address<em>*</em></label>
+                                    <input type="email" placeholder="Enter your e-mail" id="email" required>
+                                </div>
+                                <div class="privacy-check">
+                                    <input type="checkbox" id="privacy-box-1" value="">
+                                    <label for="privacy-box-1">Keep my donation anonymous</label>
+                                </div>
+                                <div class="privacy-check">
+                                    <input type="checkbox" id="privacy-box-2" value="">
+                                    <label for="privacy-box-2">I agree to hear more from WinTogether via email</label>
+                                </div>                            
+                            </div>
+
+                            <div class="payment-info">
+                                <div class="entry-amount">
+                                    <h3>Amount:</h3>
+                                    <div class="show-amount">
+                                        <h5>Total: </h5>
+                                        <strong><em>$</em>20.00 <span>USD</span></strong>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <h3>Payment method:</h3>
+                                    <div class="payment-option">
+                                        <input type="radio" name="payment-op" id="visa-card" value="" checked>
+                                        <label for="visa-card">
+                                            <img src="../img/visa-card.png" alt="">
+                                        </label>
+                                    </div>
+                                    <div class="payment-option">
+                                        <input type="radio" name="payment-op" id="paypal" value="">
+                                        <label for="paypal">
+                                            <img src="../img/paypel-card.png" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="payment-submit-btn">
+                            <button type="submit">Donate Now</button>
+                            <p class="privacy-text">By entering this Sweepstake, I accept WinTogether <a href="#">Terms of Service</a>, <a href="#">Official Rules</a>, and <a href="#">Privacy Policy</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="side-content">
+                    <div class="side-content-wrap">
+                        <div class="winCampain">
+                            <h2>Win a 3 Days trip to Paris for Two people</h2>
+                            <p>Your donation will support: <a href="#">Support the James Beard Foundation </a></p>
+                        </div>
+                        <div class="winTerms">
+                            <ul>
+                                <li><a href="#">Aliquam sodales nunc non enim rutrum, nec suscipit dui tempus.</a></li>
+                                <li><a href="#">Nulla lacinia justo quis tellus porttitor, eu dignissim tellus aliquam.</a></li>
+                                <li><a href="#">Ut tempor libero id aliquet pretium.</a></li>
+                            </ul>
+                            <button>Read More</button>
+                        </div>
+                    </div>
+
+                    <div class="winSecurity">
+                        <h3><i class='bx bxs-lock'></i> 100% Secure Payments</h3>
+                        <p>This is a secure 128 bit SSL encrypted payment to ensure that all of your data and information is protected.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- =============Donation Section End=============  -->
+
+        <!-- =============charity partners Start=============  -->
+        <section class="charity-wrap">
+            <div class="common-wrap charity-inner">
+                <div class="sec_title">
+                    <h2>Charity Partners</h2>
+                </div>
+
+                <div class="chp-wrapper">
+                    <div class="chp-logo">
+                        <img src="../img/logo-1.png" alt="">
+                    </div>
+                    <div class="chp-logo">
+                        <img src="../img/logo-2.png" alt="">
+                    </div>
+                    <div class="chp-logo">
+                        <img src="../img/logo-3.png" alt="">
+                    </div>
+                    <div class="chp-logo">
+                        <img src="../img/logo-4.png" alt="">
+                    </div>
+                    <div class="chp-logo">
+                        <img src="../img/logo-5.png" alt="">
+                    </div>
+                    <div class="chp-logo">
+                        <img src="../img/logo-6.png" alt="">
+                    </div>
+                    <div class="chp-logo">
+                        <img src="../img/logo-7.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============charity partners End============= -->
+
+        <!-- =============Footer section start============= -->
+        <footer class="footer-wrap">
+            <div class="common-wrap footer-inner">
+                <div class="footer-content-wrap">                    
+                    <div class="f-box">
+                        <div class="fMenu-logo">
+                            <h2><span>Win</span>Together.</h2>
+                        </div>
+                        <div class="fMenu-desc">
+                            <p>Aliquam sodales nunc non enim rutrum, nec suscipit dui tempus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, saepe!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="f-box">
+                        <div class="fMenu-title">
+                            <h2>NAVIGATION</h2>
+                        </div>
+                        <div class="fMenu-items">
+                            <ul>
+                                <li><a href="#">Cars</a></li>
+                                <li><a href="#">Entertainment</a></li>
+                                <li><a href="#">Travels</a></li>
+                                <li><a href="#">Winners</a></li>
+                                <li><a href="#">Blogs</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Sign in</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="f-box">
+                        <div class="fMenu-title">
+                            <h2>SOCIAL MEDIA</h2>
+                        </div>
+                        <div class="fMenu-icons">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                                <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="f-box">
+                        <div class="fMenu-title">
+                            <h2><span>Win</span>Together.</h2>
+                        </div>
+                        <div class="submit-btn">
+                            <input type="text" placeholder="Your email address"> <br/>
+                            <input type="submit" value="Enter Now">
+                        </div>
+                    </div>                    
+                </div>
+                
+                <div class="copyRight">
+                    <span>Copyright &copy; 2020 WinTogether. All rights reserved. </span>
+                </div>
+            </div>
+        </footer>
+        <!-- =============Footer section End============= -->
+    </main>
+
+
+    <!-- JavaScript File Link -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
