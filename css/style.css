@@ -342,6 +342,7 @@ The Global goals
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 .global-inner{
     display: flex;
@@ -354,7 +355,9 @@ The Global goals
 .gloabal-img{
     width: 42%;
     margin-bottom: 20px;
-    position: relative;
+    position: absolute;
+    right: 0;
+    bottom: -72px;
 }
 .global-content .global-icon img{
     width: 70px;
@@ -392,10 +395,8 @@ The Global goals
     color: #fff;
 }
 .gloabal-img img {
-    position: absolute;
-    bottom: -120px;
-    left: 0px;
-    width: 90%;
+   max-width: 500px;
+   width: 100%;
 }
 
 
@@ -1424,9 +1425,6 @@ Responsive Layout Start
         width: 100%;
     }
     .gloabal-img{
-        width: 70%;
-    }
-    .gloabal-img img{
         position: static;
     }
     ul.pageNav-right{
@@ -1515,4 +1513,21 @@ Responsive Layout Start
 		max-width: 100%;
 		height:100%;
 	}
+    .global-content .global-icon img {
+        width: 40px;
+    }
+    .global-content .global-icon span {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .glb-title h2 {
+        font-size: 22px;
+    }
+    .hero-wrap .home_title h2 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .term-title h2 {
+        font-size: 25px;
+    }
 }
