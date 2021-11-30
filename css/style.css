@@ -1221,6 +1221,7 @@ Login Page css Start
 section.login-from{
     display: grid;
     place-items: center;
+    background: linear-gradient(to right, #99004D 0%, #ff0080 100%);
 }
 .container{
 	background: #fff;
